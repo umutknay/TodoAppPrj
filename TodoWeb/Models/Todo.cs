@@ -1,10 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TodoApi.Models
+namespace TodoWeb.Models
 {
     [Table("Todo")]
-    public class Todo
+    public class Todo 
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

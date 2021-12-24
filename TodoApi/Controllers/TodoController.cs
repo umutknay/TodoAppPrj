@@ -18,6 +18,7 @@ namespace TodoApi.Controllers
         {
             _todoService = service;
         }
+
         [HttpGet]
         [Route("[action]")]
         public IActionResult GetAllTodos()
