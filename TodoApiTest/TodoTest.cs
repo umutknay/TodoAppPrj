@@ -20,7 +20,7 @@ namespace TodoApiTest
         public TodoTest()
         {
             _mockTodo = new Mock<ITodoService>();
-            _controller = new TodoController(_mockTodo.Object);
+            _controller = new TodoController(_mockTodo.Object,null);
 
         }
 
