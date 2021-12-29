@@ -35,7 +35,7 @@ namespace TodoApi.Controllers
             }
         }
         [HttpGet]
-        [Route("[action]/id")]
+        [Route("[action]/{id}")]
         public IActionResult GetTodoById(int id)
         {
             try
@@ -49,6 +49,8 @@ namespace TodoApi.Controllers
                 return BadRequest();
             }
         }
+
+
         [HttpPost]
         [Route("[action]")]
         public IActionResult SaveTodos(Todo todo)

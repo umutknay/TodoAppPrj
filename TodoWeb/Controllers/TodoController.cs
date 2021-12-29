@@ -37,5 +37,24 @@ namespace TodoWeb.Controllers
             await _todoService.SaveTodo(todo);
             return RedirectToAction(nameof(Index));
         }
+
+        public async Task<IActionResult> Select(int id)
+        {
+            var task = await _todoService.GetTodoDetailById(id);
+            if(task == null)
+            {
+                RedirectToAction(nameof(Index));
+
+            }
+            Todo todo = new()
+            {
+                Id=task.Id,
+                Title= task.Title,
+                Description = task.Description
+
+            };
+            return View(todo);
+        }
+        
     }
 }

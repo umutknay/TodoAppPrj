@@ -21,6 +21,7 @@
                                     <th>Id</th>
                                     <th>Görev</th>
                                     <th>Açıklama</th>
+                                    <th>İşlemler</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -31,6 +32,9 @@
                                     <td>@item.Id</td>
                                     <td>@item.Title</td>
                                     <td>@item.Description</td>
+                                    <td>
+                                        <a asp-controller="Todo" asp-action="Select" asp-route-id="@item.Id" class="btn btn-success btn-sm">Seç</a>
+                                    </td>
                                 </tr>
 
                         }
